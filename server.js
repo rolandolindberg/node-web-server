@@ -50,8 +50,23 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/projects', (req, res) => {
-  res.render('projects.hbs', {
+  res.render('contents.hbs', {
     pageTitle: 'Projects Page',
+    content: 'Some projects here!'
+  });
+});
+
+app.get('/tricolor-com-cerveja', (req, res) => {
+  res.render('contents.hbs', {
+    pageTitle: 'Blog Tricolor com Cerveja',
+    content: 'Aqui mais notícias do São Paulo Futebol Clube!'
+  });
+});
+
+app.get('/o-que-ta-rolando', (req, res) => {
+  res.render('contents.hbs', {
+    pageTitle: 'O que tá Rolando?',
+    content: 'Muita coisa sobre música, cerveja, filmes e séries'
   });
 });
 
